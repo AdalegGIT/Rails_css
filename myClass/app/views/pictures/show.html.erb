@@ -1,0 +1,6 @@
+
+
+<p><%= @image.title %>, <%= @image.artist %></p>
+<img src="<%= @image.url %>">
+
+<%= link_to "Back to Pictures", pictures_url %> | <%= link_to "Edit", edit_picture_path(@image) %> | <%= link_to "Delete", picture_path(@image), method: :delete, data: {confirm: "Are you sure you want to delete this picture?"}  %>

@@ -1,0 +1,10 @@
+<h1>Pictures</h1>
+
+<%if @images.empty? %>
+<p> Sorry !! No images :( </p>
+<%else%>
+<% @images.each do |picture| %>
+  <p><%= picture.title %>, <%= picture.artist %></p>
+  <img src="<%= picture.url %>">
+<% end %>
+<%end%>
